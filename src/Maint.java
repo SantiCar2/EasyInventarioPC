@@ -23,6 +23,8 @@ public class Maint {
 	public JFrame frame;
 	private JTable table;
 	EditTableWindow edit = new EditTableWindow();
+	Payment pay = new Payment();
+	
 
 	/**
 	 * Launch the application.
@@ -55,7 +57,6 @@ public class Maint {
 	 * @throws FontFormatException 
 	 */
 	private void initialize() throws FontFormatException, IOException {
-		
 		
 		Font font = Font.createFont(Font.TRUETYPE_FONT, new File("font.ttf"));
 		font = font.deriveFont(Font.PLAIN, 15);
@@ -147,7 +148,15 @@ public class Maint {
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Abre panel de pago");
-				
+				pay.frame.setEnabled(true);
+				pay.frame.setVisible(true);
+				while(Payment.pagando) {
+					
+				}
+				if(Payment.pagado) {
+					btnNewButton_1.setEnabled(true);
+					btnNewButton_2.setEnabled(false);
+				}
 				
 			}
 		});

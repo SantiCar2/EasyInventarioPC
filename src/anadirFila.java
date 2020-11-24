@@ -10,6 +10,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Window.Type;
@@ -61,9 +62,9 @@ public class anadirFila extends JFrame {
 	 */
 	public anadirFila() throws FontFormatException, IOException {
 		setType(Type.UTILITY);
-		Font font = Font.createFont(Font.TRUETYPE_FONT, new File("C:\\Users\\santi\\eclipse-workspace\\Proyecto 2\\font.ttf"));
+		Font font = Font.createFont(Font.TRUETYPE_FONT, new File("font.ttf"));
 		font = font.deriveFont(Font.PLAIN, 15);
-		Font font2 = Font.createFont(Font.TRUETYPE_FONT, new File("C:\\Users\\santi\\eclipse-workspace\\Proyecto 2\\font.ttf"));
+		Font font2 = Font.createFont(Font.TRUETYPE_FONT, new File("font.ttf"));
 		font2 = font2.deriveFont(Font.PLAIN, 25);
 		GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
 		ge.registerFont(font);
@@ -211,7 +212,7 @@ public class anadirFila extends JFrame {
 						columnNamesWId[i] = getTableInfo.getColumnNames(login.buf, false)[i - 1];
 					}
 				}
-				for (int i = 0; i < columnNames.length; i++) {
+				for (int i = 0; i < columnNames.length + 1; i++) {
 					if(i == 0) {
 						newInfo[i] = textField.getText();
 					} if(i == 1) {
@@ -226,11 +227,11 @@ public class anadirFila extends JFrame {
 						newInfo[i] = textField_5.getText();
 					}
 				}
-				if(updateTable.addTable(login.buf, columnNamesWId, newInfo)) {
-					//todo bien
+				if(updateTable.addTable(login.buf, columnNamesWId, newInfo, columnNames)) {
+					JOptionPane.showMessageDialog(null, "Añadido exitosamente!" ,"", 1);
+					dispose();
 				} else {
-					//algo malo pasó
-					textField.setText("");
+					JOptionPane.showMessageDialog(null, "Algúna información no coincide con el tipo de datos de la columna\n el tipo de datos está demarcado en la parte inferior de la ventana." ,"Error", 0);
 					textField_1.setText("");
 					textField_2.setText("");
 					textField_3.setText("");
