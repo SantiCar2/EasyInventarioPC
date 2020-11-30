@@ -85,7 +85,7 @@ public class registroBack {
 		try {
 			Connection CON = DriverManager.getConnection(CONN, "auth", "4815162342");
 			Statement stmt = CON.createStatement();
-			String query = "INSERT INTO `login`.`main` (`email`, `password`, `tableId`, `payment`) VALUES ('" + mail + "', '" + pass + "', '" + tableid + "', '0');";
+			String query = "INSERT INTO `login`.`main` (`email`, `password`, `tableId`, `payment`) VALUES ('" + mail + "', '" + pass + "', '" + tableid + "', '1');";
 			System.out.println(query);
 			
 			Random rand = new Random();

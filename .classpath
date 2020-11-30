@@ -6,5 +6,7 @@
 	<classpathentry kind="lib" path="C:/Users/santi/eclipse-workspace/Proyecto 2/lib/commons-dbutils-1.7.jar"/>
 	<classpathentry kind="lib" path="C:/Users/santi/eclipse-workspace/Proyecto 2/lib/javax.mail.jar"/>
 	<classpathentry kind="lib" path="C:/Users/santi/eclipse-workspace/Proyecto 2/lib/activation.jar"/>
+	<classpathentry kind="lib" path="C:/Users/santi/OneDrive/Escritorio/Proyecto de Ingeniera/JSON/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/santi/OneDrive/Escritorio/Proyecto de Ingeniera/OKHTTP/okhttp-3.9.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

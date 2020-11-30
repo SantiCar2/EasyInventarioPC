@@ -67,7 +67,7 @@ public class Payment {
 		frame.setBounds(100, 100, 491, 202);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		frame.setContentPane(frame.getContentPane());
+
 		
 		JLabel lblNewLabel = new JLabel("Pagos");
 		lblNewLabel.setBounds(10, 11, 211, 28);

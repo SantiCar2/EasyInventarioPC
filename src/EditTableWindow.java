@@ -310,6 +310,16 @@ public class EditTableWindow {
 		frame.getContentPane().add(textField_2);
 		
 		JButton btnAadirFila = new JButton("A\u00F1adir fila");
+		btnAadirFila.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					anadirFila add = new anadirFila();
+					add.setVisible(true);
+				} catch (Exception e1) {
+					e1.printStackTrace();
+				}
+			}
+		});
 		btnAadirFila.setFont(new Font("Brutal Type", Font.PLAIN, 15));
 		btnAadirFila.setBounds(439, 396, 209, 23);
 		frame.getContentPane().add(btnAadirFila);
